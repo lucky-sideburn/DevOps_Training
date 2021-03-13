@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/marco/Development/DevOps labs/Ex1/master_files","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
