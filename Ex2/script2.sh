@@ -4,7 +4,7 @@ yum check update -y
 yum update -y
 machine_hostname=$(hostname) #Checking if the machine is the master
 if [ "$machine_hostname" = "master-node" ]; then
-    yes | sudo yum install docker
+    sudo yum install docker -y
     #install docker
     sudo systemctl start docker
     JENKINS_VERSION="2.0-rc-1"
