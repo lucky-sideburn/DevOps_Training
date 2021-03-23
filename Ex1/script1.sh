@@ -22,7 +22,7 @@ chkconfig httpd on
 systemctl status httpd | grep -i active
 machine_hostname=$(hostname) #Checking if the machine is the master
 if [ "$machine_hostname" = "master-node" ]; then
-    yes | rm /etc/httpd/conf.d/proxy.conf #remove current proxy conf configuration
+    ls /etc/httpd/conf.d/proxy.conf && rm /etc/httpd/conf.d/proxy.conf #remove current proxy conf configuration
     cp /vagrant/proxy.conf /etc/httpd/conf.d/
     echo "Proxy config has been copied" #The proxy conf must be set only on the master node.
 fi    
